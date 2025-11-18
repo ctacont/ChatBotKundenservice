@@ -170,6 +170,9 @@ import axios from 'axios'
 import DOMPurify from 'dompurify'
 import { useVoice } from './composables/useVoice'
 
+// API-URL aus Environment Variable oder Fallback
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001'
+
 export default {
   name: 'Chatbot',
   setup() {
@@ -221,7 +224,7 @@ export default {
 
     const loadWelcomeMessage = async () => {
       try {
-        const response = await axios.get('/api/admin/get-config')
+        const response = await axios.get(`${API_URL}/api/admin/get-config`)
         if (response.data.metadata?.welcomeMessage) {
           welcomeMessage.value = response.data.metadata.welcomeMessage
         }
@@ -273,7 +276,7 @@ export default {
       loading.value = true
 
       try {
-        const response = await axios.post('/api/chat', {
+        const response = await axios.post(`${API_URL}/api/chat`, {
           message: message
         })
 
