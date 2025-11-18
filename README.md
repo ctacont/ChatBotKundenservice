@@ -1,145 +1,86 @@
-# 💬 Kundenservice Chatbot
+# 🤖 Kundenservice Chatbot
 
-Ein moderner Chatbot für Webdesign-Dienstleistungen mit **OpenAI GPT-3.5**, gebaut mit **Node.js + Express** (Backend) und **Vue 3 + Tailwind CSS** (Frontend).
+Ein professioneller KI-gestützter Kundenservice-Chatbot mit **Spracheingabe/Sprachausgabe** und **HTML-Rendering**.
 
-## 🎯 Features
+## ✨ Features
 
-✅ Intelligente KI-gesteuerte Antworten (OpenAI GPT-3.5)  
-✅ Echtzeit-Chat-Kommunikation  
-✅ Responsive Design mit Tailwind CSS  
-✅ Benutzerfreundliche Vue 3 UI  
-✅ REST API Backend  
-✅ Mehrsprachigkeit (auf Deutsch optimiert)
+### 🎤 Speech-to-Text (STT)
+- **Web Speech API** mit Deutsch (de-DE) Unterstützung
+- Live Transkription mit Interim Results
+- Confidence Score Anzeige
 
-## 🚀 Installation & Setup
+### 🔊 Text-to-Speech (TTS) - Intelligente Fallback-Kette
+1. **AWS Polly** (Primär) - 5M Zeichen/Monat kostenlos
+2. **Bark via Replicate** (Fallback 1) - 6 Requests/Minute kostenlos
+3. **ElevenLabs** (Fallback 2) - 10k Zeichen/Monat kostenlos
+4. **Browser TTS** (Ultimate Fallback) - Immer verfügbar
 
-### 1. Backend Dependencies installieren
+### 🎨 Admin Panel (WYSIWYG Editor)
+- Rich Text Editor mit HTML-Formatierung
+- Voice Settings pro Provider (Polly, Bark, ElevenLabs)
+- TTS Provider Prioritization mit Drag-and-Drop
+- Persistente Konfiguration
+
+### 💬 Intelligente Chat-Funktionen
+- Kategorien-basierte Smart Patterns
+- Groq AI Integration
+- HTML-Safe Rendering mit DOMPurify XSS-Schutz
+
+## 🚀 Quick Start
 
 ```bash
+# Backend
 cd backend
+cp .env.example .env
+# Füge API-Keys ein!
 npm install
-```
+npm start
 
-### 2. OpenAI API Key besorgen
-
-1. Gehe zu [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
-2. Melde dich an oder erstelle einen Account
-3. Generiere einen neuen API Key
-4. Kopiere den Key
-
-### 3. .env Datei aktualisieren
-
-Bearbeite `backend/.env`:
-
-```env
-PORT=5000
-NODE_ENV=development
-OPENAI_API_KEY=sk-your-actual-api-key-here
-```
-
-Ersetze `sk-your-actual-api-key-here` mit deinem echten OpenAI API Key.
-
-### 4. Backend starten
-
-```bash
-npm run dev
-```
-
-Server läuft auf: `http://localhost:5000`
-
-### 5. Frontend installieren & starten
-
-In einem neuen Terminal:
-
-```bash
+# Frontend (neues Terminal)
 cd frontend
 npm install
 npm run dev
 ```
 
-Frontend läuft auf: `http://localhost:3000`
+**Zugriff:**
+- 🤖 Chatbot: http://localhost:3001
+- ⚙️ Admin: http://localhost:3001/admin
 
-## 📁 Projektstruktur
+## 📋 API-Keys benötigt
+
+- **Groq** - https://console.groq.com (kostenlos)
+- **AWS** - https://aws.amazon.com (kostenlos)
+- Optional: ElevenLabs, Replicate
+
+## 📁 Struktur
 
 ```
 ChatBotKundenservice/
 ├── backend/
-│   ├── server.js          # Express Server + OpenAI Integration
-│   ├── package.json
-│   └── .env               # Umgebungsvariablen (GEHEIM!)
+│   ├── server.js              # Express API
+│   ├── chatbot-config.json    # Konfiguration
+│   └── package.json
 ├── frontend/
 │   ├── src/
-│   │   ├── App.vue        # Haupt-Komponente
-│   │   ├── main.js
-│   │   └── style.css
-│   ├── index.html
-│   ├── vite.config.js
-│   ├── tailwind.config.js
+│   │   ├── Chatbot.vue       # Chat UI
+│   │   ├── Admin.vue         # Admin Panel
+│   │   ├── components/RichTextEditor.vue  # WYSIWYG
+│   │   └── composables/useVoice.js  # Voice Logik
 │   └── package.json
 └── README.md
 ```
 
-## 🔧 API Endpoints
+## 🛡️ Sicherheit
 
-### POST `/api/chat`
-Sendet eine Nachricht an den KI-Chatbot.
-
-**Request:**
-```json
-{
-  "message": "Wie viel kostet eine Website?"
-}
-```
-
-**Response:**
-```json
-{
-  "reply": "Unsere Webdesign-Pakete beginnen ab €2.000 für das Basispaket...",
-  "timestamp": "2024-11-13T..."
-}
-```
-
-## 💰 Kosten
-
-OpenAI GPT-3.5 ist sehr günstig:
-- ~0,001$ pro 1.000 Tokens
-- Eine typische Unterhaltung: ~1-2 Cent
-
-**Kostenlos testen:** OpenAI gibt dir $5 kostenlosen Credits zum Testen.
-
-## 🎨 Anpassungen
-
-### Chatbot-Verhalten ändern
-Bearbeite den `SYSTEM_PROMPT` in `backend/server.js`:
-
-```javascript
-const SYSTEM_PROMPT = `Du bist ein freundlicher Kundenservice-Chatbot...`;
-```
-
-### Styling anpassen
-Modifiziere `frontend/src/style.css` oder `tailwind.config.js`.
-
-## ⚠️ Wichtig: .env Sicherheit
-
-**NIEMALS deinen OpenAI API Key in GitHub pushen!**
-
-- Die `.env` Datei steht bereits in `.gitignore`
-- Teile deinen Key mit niemandem
-- Bei Verdacht auf Kompromittierung: API Key regenerieren
-
-## 🚀 Nächste Schritte
-
-1. **Chat-Verlauf speichern**: Datenbank integrieren (MongoDB)
-2. **Benutzerkonten**: Authentifizierung mit JWT
-3. **Weitere KI-Features**: Datei-Upload für Kontextinformationen
-4. **Deployment**: Docker + Railway/Vercel
-5. **Analytics**: Chat-Statistiken und Feedback
+- XSS Protection mit DOMPurify
+- API-Keys in `.env` (nicht committen!)
+- HTML Whitelist: `<p>, <strong>, <em>, <ul>, <li>, <a>, <h1-h4>, <code>`
 
 ## 📝 Lizenz
 
-MIT
+MIT - Frei zu verwenden und zu modifizieren
 
 ---
 
-**Viel Spaß mit deinem intelligenten Chatbot! 🤖✨**
+**Gebaut mit ❤️ für professionelle Kundenservice-Chatbots**
 
