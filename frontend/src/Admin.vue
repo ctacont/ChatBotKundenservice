@@ -402,6 +402,11 @@ import { ref, computed } from 'vue'
 import axios from 'axios'
 import RichTextEditor from './components/RichTextEditor.vue'
 
+// API-URL: Production = Render Backend, Development = localhost
+const API_URL = (typeof window !== 'undefined' && window.location.hostname === 'localhost') 
+  ? 'http://localhost:5001' 
+  : 'https://chatbotkundenservice.onrender.com'
+
 export default {
   name: 'Admin',
   components: {
@@ -624,7 +629,7 @@ export default {
           }
         })
 
-        await axios.post('/api/admin/save-config', {
+        await axios.post(`${API_URL}/api/admin/save-config`, {
           categories: orderedCategories,
           metadata: {
             welcomeMessage: welcomeMessage.value,
@@ -669,7 +674,7 @@ export default {
     // Load config on mount
     const loadConfig = async () => {
       try {
-        const response = await axios.get('/api/admin/get-config')
+        const response = await axios.get(`${API_URL}/api/admin/get-config`)
         categories.value = response.data.categories
         categoryOrder.value = Object.keys(response.data.categories)
         // Explicitly select first category
@@ -698,7 +703,7 @@ export default {
     const previewVoice = async (text, voice) => {
       try {
         console.log('🔊 Vorschau starten:', voice)
-        const response = await axios.post('/api/tts-preview', {
+        const response = await axios.post(`${API_URL}/api/tts-preview`, {
           text: text,
           voice: voice
         }, {
