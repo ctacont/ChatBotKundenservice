@@ -1,0 +1,316 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "language": "de",
+    "businessName": "Webdesign & Development",
+    "businessEmail": "info@hasanyueksel.de",
+    "welcomeMessage": "<p>Hallo! 👋</p><h1>Willkommen</h1><p>zu <strong>unserem <em>Kundenservice</em></strong>-Chatbot. Wie kann ich dir heute helfen?</p><p></p>",
+    "voiceSettings": {
+      "selectedVoice": "polly-marlene",
+      "barkVoice": "de_speaker_2",
+      "elevenLabsVoice": "charlotte"
+    },
+    "ttsPriority": [
+      "polly",
+      "bark",
+      "elevenlabs",
+      "browser"
+    ]
+  },
+  "smartPatterns": {
+    "ecommerce": {
+      "keywords": [
+        "onlineshop",
+        "e-shop",
+        "e-commerce",
+        "webshop",
+        "shop",
+        "online-shop",
+        "ecommerce",
+        "verkaufen",
+        "verkauf"
+      ],
+      "response": "🛍️ Ein Online-Shop ist eine großartige Idee!\n\nBei {businessName} entwickeln wir professionelle Online-Shops mit:\n✓ Benutzerfreundliches Design\n✓ Sicheres Zahlungssystem\n✓ SEO-optimiert\n✓ Mobile-responsive\n\n💬 Erzähl uns mehr:\n• Was verkaufst du?\n• Wie viele Produkte?\n\n📧 <a href=\"mailto:{businessEmail}\">Kontaktiere uns</a>"
+    },
+    "pricing": {
+      "keywords": [
+        "preis",
+        "kosten",
+        "geld",
+        "budget",
+        "wie viel",
+        "wieviel",
+        "tarif",
+        "paket"
+      ],
+      "response": "💰 Vielen Dank für die Frage! Die Preise hängen von deinen genauen Anforderungen ab.\n\nBei {businessName} bieten wir flexible Pakete für:\n• Kleine Projekte (ab €)\n• Mittlere Projekte (ab €€)\n• Enterprise-Lösungen (individuell)\n\n📧 <a href=\"mailto:{businessEmail}\">Kontaktiere uns für ein Angebot</a>"
+    },
+    "timeline": {
+      "keywords": [
+        "dauer",
+        "wie lange",
+        "zeitraum",
+        "wochen",
+        "tage",
+        "termine"
+      ],
+      "response": "⏱️ Die Dauer hängt vom Umfang des Projekts ab.\n\n• Kleine Websites: 2-4 Wochen\n• Online-Shops: 4-8 Wochen\n• Custom-Lösungen: individuell\n\n📧 <a href=\"mailto:{businessEmail}\">Vereinbare einen Termin</a>"
+    },
+    "services": {
+      "keywords": [
+        "service",
+        "leistung",
+        "angebot",
+        "was bietet",
+        "können wir",
+        "könnt ihr"
+      ],
+      "response": "✨ Bei {businessName} bieten wir umfassende Web-Lösungen.\n\n📧 <a href=\"mailto:{businessEmail}\">Erzähl uns von deinem Projekt</a>"
+    },
+    "team": {
+      "keywords": [
+        "team",
+        "unternehmen",
+        "firma",
+        "wer seid",
+        "über euch",
+        "company"
+      ],
+      "response": "👥 Bei {businessName} arbeitet ein erfahrenes Team an innovativen Web-Lösungen.\n\n📧 <a href=\"mailto:{businessEmail}\">Kontaktiere uns</a>"
+    },
+    "contact": {
+      "keywords": [
+        "kontakt",
+        "erreichen",
+        "unterstützung",
+        "support",
+        "email",
+        "adresse",
+        "telefon"
+      ],
+      "response": "📧 Du erreichst uns hier:\n<a href=\"mailto:{businessEmail}\">{businessEmail}</a>\n💬 Chat: Direkt hier im Chatbot\n🕐 Mo-Fr, 9:00-17:00 Uhr"
+    },
+    "portfolio": {
+      "keywords": [
+        "portfolio",
+        "beispiel",
+        "projekt",
+        "referenz",
+        "zeig",
+        "arbeiten"
+      ],
+      "response": "🎨 Schau dir unsere bisherigen Projekte an!\n\n📧 <a href=\"mailto:{businessEmail}\">Schreib uns für Portfolio</a>"
+    },
+    "default": {
+      "keywords": [],
+      "response": "💡 Danke für deine Frage! Das ist eine gute Überlegung!\n\n📧 Kontakt: <a href=\"mailto:{businessEmail}\">{businessEmail}</a>\n📞 Unser Team hilft dir gerne!"
+    }
+  },
+  "categories": {
+    "Test support": {
+      "name": "Test",
+      "keywords": [
+        "hasan",
+        "hasana"
+      ],
+      "response": "<p>TEST- <strong>Hasan </strong></p><p><strong>😀😀😀😀😀😀</strong></p><p>1. Schreib uns eine E-Mail mit deinem Projekt </p><p>2. Wir melden uns innerhalb von 24h - info@hasanyueksel</p>",
+      "followUp": [
+        "Was kostet eine Website?",
+        "Wie kann ich euch kontaktieren?"
+      ]
+    },
+    "technologie": {
+      "name": "Technologien & Stack",
+      "keywords": [
+        "technologie",
+        "framework",
+        "vue",
+        "react",
+        "node",
+        "stack",
+        "angular",
+        "svelte",
+        "python",
+        "tool",
+        "wordpress",
+        "programmierung"
+      ],
+      "response": "Kontakt &amp; Termin\n-----------------------------------------------\n1. Schreib uns eine E-Mail mit deinem Projekt\n2. Wir melden uns innerhalb von 24h\n3. Kostenloses Erstgespräch (15-30 Min)\n4. Unverbindliches Angebot🎯 **Tipp:**\nJe mehr Details du uns gibst, desto genauer können wir dir helfen:\n• Was für eine Website brauchst du?\n• Welches Budget hast du?\n• Wann soll's losgehen?\n-\nSchreib uns einfach - wir freuen uns auf dein Projekt! 🚀",
+      "followUp": [
+        "Was kostet eine Website?",
+        "Wie lange dauert ein Projekt?",
+        "Zeigt mir euer Portfolio"
+      ]
+    },
+    "hello": {
+      "name": "Begrüßung",
+      "keywords": [
+        "hallo",
+        "hi",
+        "hey",
+        "guten",
+        "morgen",
+        "tag",
+        "abend"
+      ],
+      "response": "Hallo! 👋 Schön, dass du da bist!\n\nIch bin dein Support-Assistent für Webdesign & Development. Ich helfe dir gerne bei Fragen zu:\n\n💰 Preisen und Paketen\n⏱️ Projektdauer\n🛠️ Technologien\n📧 Kontaktaufnahme\n👥 Unserem Team\n\nWas interessiert dich am meisten?",
+      "followUp": [
+        "Was kostet eine Website?",
+        "Welche Technologien nutzt ihr?",
+        "Wie kann ich euch kontaktieren?"
+      ]
+    },
+    "Frontend-Designer": {
+      "name": "Hasan",
+      "keywords": [
+        "hasan",
+        "erstellen"
+      ],
+      "response": "Ich erstelle Frontend-Design.\nMache techn. Support für HTML, CSS und Code.\n\nViel Glück!",
+      "followUp": [
+        "Was kostet eine Website?",
+        "Wie kann ich euch kontaktieren?"
+      ]
+    },
+    "kontakt": {
+      "name": "Kontakt & Termin",
+      "keywords": [
+        "kontakt",
+        "email",
+        "telefon",
+        "termin",
+        "anrufen",
+        "schreiben",
+        "nachricht",
+        "erreichen",
+        "sprechen",
+        "testkontakt"
+      ],
+      "response": "TEST <br>-----------------------------------------------\n1. Schreib uns eine E-Mail mit deinem Projekt\n2. Wir melden uns innerhalb von 24h\n3. Kostenloses Erstgespräch (15-30 Min)\n4. Unverbindliches Angebot🎯 **Tipp:**\nJe mehr Details du uns gibst, desto genauer können wir dir helfen:\n• Was für eine Website brauchst du?\n• Welches Budget hast du?\n• Wann soll's losgehen?\n-\nSchreib uns einfach - wir freuen uns auf dein Projekt! 🚀",
+      "followUp": [
+        "Was kostet eine Website?",
+        "Wie lange dauert ein Projekt?",
+        "Erzählt mir von eurem Team"
+      ]
+    },
+    "design": {
+      "name": "Design & Features",
+      "keywords": [
+        "design",
+        "responsive",
+        "feature",
+        "ui",
+        "ux",
+        "layout",
+        "aussehen",
+        "wie sieht",
+        "struktur",
+        "farbe",
+        "modern"
+      ],
+      "response": "TEST<br>-----------------------------------------------\n1. Schreib uns eine E-Mail mit deinem Projekt\n2. Wir melden uns innerhalb von 24h\n3. Kostenloses Erstgespräch (15-30 Min)\n4. Unverbindliches Angebot🎯 **Tipp:**\nJe mehr Details du uns gibst, desto genauer können wir dir helfen:\n• Was für eine Website brauchst du?\n• Welches Budget hast du?\n• Wann soll's losgehen?\n-\nSchreib uns einfach - wir freuen uns auf dein Projekt! 🚀",
+      "followUp": [
+        "Was kostet eine Website?",
+        "Zeigt mir euer Portfolio",
+        "Welche Technologien nutzt ihr?"
+      ]
+    },
+    "preis": {
+      "name": "Preise & Pakete",
+      "keywords": [
+        "preis",
+        "kosten",
+        "kostet",
+        "geld",
+        "paket",
+        "budget",
+        "ausgaben",
+        "wieviel",
+        "wie viel",
+        "€",
+        "euro",
+        "bezahlen",
+        "was kostet",
+        "wieviel kostet"
+      ],
+      "response": "💰 Unsere Webdesign-Pakete im Überblick:\n\n🌱 STARTER (ab €2.000)\n• 3-5 Seiten (z.B. Home, Über uns, Dienste, Kontakt)\n• Responsive Design (Mobil & Desktop)\n• Kontaktformular\n• Google Maps Integration\n• 1 Monat Support\n\n🚀 BUSINESS (ab €5.000)\n• 5-10 Seiten\n• Alles aus STARTER +\n• SEO-Optimierung (Google Rankings)\n• Blog-System\n• Newsletter-Integration\n• Analytics & Tracking\n• 3 Monate Support\n\n⭐ PREMIUM (ab €10.000)\n• Unbegrenzte Seiten\n• Alles aus BUSINESS +\n• E-Commerce / Online-Shop\n• Custom Features nach Wunsch\n• Performance-Garantie\n• 6 Monate Premium-Support\n\n💡 Die genauen Kosten hängen von deinen Anforderungen ab. Magst du mir mehr über dein Projekt erzählen?",
+      "followUp": [
+        "Wie lange dauert ein Projekt?",
+        "Welche Technologien nutzt ihr?",
+        "Wie kann ich euch kontaktieren?"
+      ]
+    },
+    "zeit": {
+      "name": "Projektdauer",
+      "keywords": [
+        "zeit",
+        "dauer",
+        "lange",
+        "woche",
+        "monat",
+        "schnell",
+        "wann",
+        "lieferdatum",
+        "deadline",
+        "fertig"
+      ],
+      "response": "⏱️ Realistische Projektzeiten:\n\n⚡ **Landing Page (1 Seite)**\n└─ 1-2 Wochen\n└─ Perfekt für: Produktlaunch, Events\n\n📄 **Unternehmenswebsite (5-10 Seiten)**\n└─ 4-6 Wochen\n└─ Perfekt für: Firmen, Dienstleister\n\n🛒 **E-Commerce Shop**\n└─ 6-10 Wochen\n└─ Perfekt für: Online-Verkauf\n\n🚀 **Custom Web-App**\n└─ 10-16+ Wochen\n└─ Perfekt für: SaaS, Plattformen\n\n⏰ **Was beeinflusst die Dauer?**\n• Anzahl der Seiten\n• Custom-Features\n• Content-Bereitstellung (deine Texte/Bilder)\n• Feedback-Runden\n\n🎯 **Express-Service verfügbar!**\nBei Zeitdruck: Aufpreis 30%, aber schnellere Lieferung möglich.\n\nWann brauchst du deine Website?",
+      "followUp": [
+        "Was kostet eine Website?",
+        "Welche Technologien nutzt ihr?",
+        "Wie kann ich euch kontaktieren?"
+      ]
+    },
+    "team": {
+      "name": "Team & Erfahrung",
+      "keywords": [
+        "team",
+        "wir",
+        "erfahrung",
+        "ihr",
+        "entwickler",
+        "designer",
+        "leute",
+        "person",
+        "who",
+        "wer"
+      ],
+      "response": "👥 Über unser Team:\n\n**💪 Wer wir sind:**\n• 5+ erfahrene Entwickler & Designer\n• Spezialisiert auf Vue.js, React & Node.js\n• 10+ Jahre Erfahrung im Web-Development\n• Standort: Deutschland (deutschsprachig)\n\n**🏆 Was uns auszeichnet:**\n✓ 100+ erfolgreiche Projekte seit 2014\n✓ Kunden in DE, AT, CH & EU\n✓ 98% Kundenzufriedenheit\n✓ Transparente Kommunikation\n✓ Agile Arbeitsweise (schnelle Iterationen)\n\n**🎓 Unsere Expertise:**\n• Corporate Websites\n• E-Commerce Lösungen\n• Web-Applikationen (SaaS)\n• API-Entwicklung\n• SEO & Performance-Optimierung\n\n**🤝 Unsere Werte:**\n• Qualität vor Quantität\n• Ehrliche Beratung (kein Overselling)\n• Langfristige Partnerschaften\n• Moderner Tech-Stack (keine Legacy)\n\nMöchtest du Referenzen sehen?",
+      "followUp": [
+        "Zeigt mir euer Portfolio",
+        "Was kostet eine Website?",
+        "Wie kann ich euch kontaktieren?"
+      ]
+    },
+    "portfolio": {
+      "name": "Portfolio & Referenzen",
+      "keywords": [
+        "portfolio",
+        "arbeiten",
+        "projekte",
+        "beispiel",
+        "referenzen",
+        "zeigen",
+        "case study",
+        "work",
+        "kunden"
+      ],
+      "response": "🎯 Unsere Erfolgsgeschichten:\n\n**✨ Beispiel-Projekte:**\n\n🏢 **Corporate Websites**\n• B2B-Dienstleister\n• Anwaltskanzleien\n• Beratungsunternehmen\n→ Professionell, seriös, conversion-stark\n\n🛒 **E-Commerce**\n• Fashion-Shops\n• Elektronik-Händler\n• Handmade-Produkte\n→ Schnelle Ladezeiten, sichere Zahlungen\n\n💼 **SaaS & Web-Apps**\n• CRM-Systeme\n• Buchungsplattformen\n• Dashboard-Anwendungen\n→ Skalierbar, modern, benutzerfreundlich\n\n📱 **Landing Pages**\n• Produktlaunches\n• Event-Registrierung\n• Lead-Generation\n→ Conversion-optimiert, A/B getestet\n\n**🔒 Warum keine direkten Links?**\nAus Datenschutz-Gründen zeigen wir unsere besten Arbeiten nur im persönlichen Gespräch.\n\n📧 **Interesse?** Schreib uns an info@hasanyueksel.de und wir senden dir eine detaillierte Portfolio-Präsentation mit Screenshots und Case Studies!",
+      "followUp": [
+        "Was kostet eine Website?",
+        "Wie lange dauert ein Projekt?",
+        "Wie kann ich euch kontaktieren?"
+      ]
+    },
+    "default": {
+      "name": "Standard-Antwort",
+      "keywords": [],
+      "response": "🤔 Interessante Frage!\n\nIch bin mir nicht ganz sicher, wie ich dir am besten helfen kann.\n\n**📧 Direkte Hilfe:**\nSchreib uns an <a href=\"mailto:info@hasanyueksel.de\">info@hasanyueksel.de</a> mit deiner Frage - unser Team antwortet innerhalb von 24h!\n\n**💬 Oder frag mich zu:**\n• Preisen & Paketen\n• Projektdauer\n• Technologien\n• Kontaktmöglichkeiten\n• Unserem Team & Portfolio\n\n**💡 Tipp:** Formuliere deine Frage anders!",
+      "followUp": [
+        "Was kostet eine Website?",
+        "Wie kann ich euch kontaktieren?",
+        "Erzählt mir von eurem Team"
+      ]
+    }
+  }
+}
