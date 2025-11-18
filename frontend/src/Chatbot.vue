@@ -170,13 +170,10 @@ import axios from 'axios'
 import DOMPurify from 'dompurify'
 import { useVoice } from './composables/useVoice'
 
-// API-URL: In Production von Environment Variable, lokal von localhost
-const API_URL = (() => {
-  if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
-    return 'http://localhost:5001'
-  }
-  return import.meta.env.VITE_API_URL || 'https://chatbotkundenservice.onrender.com'
-})()
+// API-URL: Production = Render Backend, Development = localhost
+const API_URL = (typeof window !== 'undefined' && window.location.hostname === 'localhost') 
+  ? 'http://localhost:5001' 
+  : 'https://chatbotkundenservice.onrender.com'
 
 export default {
   name: 'Chatbot',
