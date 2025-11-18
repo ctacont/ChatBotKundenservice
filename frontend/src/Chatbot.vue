@@ -170,8 +170,13 @@ import axios from 'axios'
 import DOMPurify from 'dompurify'
 import { useVoice } from './composables/useVoice'
 
-// API-URL aus Environment Variable oder Fallback
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001'
+// API-URL: In Production von Environment Variable, lokal von localhost
+const API_URL = (() => {
+  if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
+    return 'http://localhost:5001'
+  }
+  return import.meta.env.VITE_API_URL || 'https://chatbotkundenservice.onrender.com'
+})()
 
 export default {
   name: 'Chatbot',
