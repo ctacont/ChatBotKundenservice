@@ -2,6 +2,13 @@
 
 Ein professioneller KI-gestützter Kundenservice-Chatbot mit **Spracheingabe/Sprachausgabe** und **HTML-Rendering**.
 
+## 🌐 Live Demo
+
+**[🚀 Jetzt testen!](https://chatbot-kundenservice.vercel.app)** 
+
+- **Frontend:** https://chatbot-kundenservice.vercel.app
+- **Backend API:** https://chatbotkundenservice.onrender.com
+
 ## ✨ Features
 
 ### 🎤 Speech-to-Text (STT)
